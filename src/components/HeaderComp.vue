@@ -6,7 +6,7 @@ export default {};
     <nav>
       <div class="divlogo">
         <router-link id="logo" to="/">
-          <img src="src/assets/img/popcorn.png" alt="" />
+          <h1><strong>filmes</strong>flix</h1>
         </router-link>
       </div>
       <div class="links">
