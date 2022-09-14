@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Buhid&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+  font-family: 'Noto Sans Buhid', sans-serif;
+}
+header {
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  border-bottom: 2px solid black;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 20px 35px rgb(0 0 0 / 5%);
+}
+header nav {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  justify-content: space-between;
+}
+
+a{
+  font-size: 21px;
+  margin: 0 25px;
+  color: rgb(15, 15, 15);
+  text-decoration: none;
+  font-weight: bold;
+  
+}
+.links a:hover{
+  background-color: rgba(0, 0, 0, 0.034);
+  border-bottom: 2px solid rgb(57, 57, 182);
+}
+.esq{
+  margin-left: 30px;
+}
+.dir{
+  margin-right: 30px;
+}
+img{
+  height: 60px;
+  width: 70px;
+}
