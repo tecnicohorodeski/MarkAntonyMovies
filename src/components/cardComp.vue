@@ -1,13 +1,15 @@
 <script>
-export default {};
+export default {
+  name: "PictureCard",
+  props: {
+    picture_src: String,
+    pic_desc: String,
+  },
+};
 </script>
 <template>
   <div class="cards">
-    <img src="src/assets/img/undraw_home_cinema_l7yl.png" alt="" />
+    <img :src="picture_src" />
     <h3>lorem lorem</h3>
-    <h4>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto neque
-      cumque dicta debitis
-    </h4>
   </div>
 </template>

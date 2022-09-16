@@ -1,5 +1,13 @@
-<script setup>
+<script>
 import CardComp from "../components/cardComp.vue";
+import imgComp from "../components/imgComp.vue";
+export default {
+  name: "app",
+  components: {
+    CardComp,
+    imgComp,
+  },
+};
 </script>
 
 <template>
@@ -19,9 +27,21 @@ import CardComp from "../components/cardComp.vue";
       </div>
     </div>
   </div>
-  <div>
-    <CardComp />
-    <CardComp />
-    <CardComp />
+  <div class="linha"></div>
+  <div class="section2">
+    <div class="div-display">
+      <div class="duvida">
+        <imgComp />
+      </div>
+      <div class="div-cards">
+        <CardComp picture_src="src/assets/img/undraw_home_cinema_l7yl.png" />
+        <CardComp picture_src="src/assets/img/undraw_horror_movie_3988.png" />
+        <CardComp picture_src="src/assets/img/undraw_netflix_q00o.png" />
+      </div>
+    </div>
+    <i class="bx bx-chevrons-down"></i>
+  </div>
+  <div class="section3">
+    <h2 class="filmes">filmes</h2>
   </div>
 </template>
