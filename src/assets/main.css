@@ -16,11 +16,6 @@ header {
   align-items: center;
   box-shadow: 0px 20px 35px rgb(0 0 0 / 5%);
 }
-.linha {
-  width: 100%;
-  height: 7vh;
-  background-color: rgb(57, 57, 182);
-}
 h1 {
   font-family: 'Fira Sans', sans-serif;
   color: rgb(255, 255, 255);
@@ -46,6 +41,30 @@ strong {
   background-size: cover;
   background-repeat: no-repeat;
 }
+.filtros {
+  display: flex;
+}
+label{
+  font-size: 1.3em;
+  margin-bottom: 5px;
+}
+.casa{
+  margin: 0 25px;
+  display: flex;
+  flex-direction: column;
+}
+.pesquisadiv {
+  display: flex;
+  flex-direction: column;
+  margin: 0 25px;
+}
+.selects {
+  display: flex;
+  flex-direction: row;
+}
+.nav-filtros {
+  color: white;
+}
 .imagem-h2 {
   font-size: 2em;
   padding: 50px;
@@ -68,8 +87,7 @@ i{
 }
 .filmes{
   color: white;
-  font-size: 2em;
-  margin-left: 75px;
+  font-size: 2.5em;
 }
 .cards {
   background-color: white;
@@ -82,7 +100,15 @@ i{
   flex-direction: row;
   align-items: center;
 }
+.section3 {
+  background-color: black;
+  margin: 25px;
+  height: 80vh;
+  padding: 45px;
+}
 .section2 {
+  border-bottom: 7vh solid rgb(57, 57, 182);
+  border-top: 7vh solid rgb(57, 57, 182);
   background-color: black;
   width: 100%;
   display: flex;

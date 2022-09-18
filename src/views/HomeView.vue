@@ -27,7 +27,6 @@ export default {
       </div>
     </div>
   </div>
-  <div class="linha"></div>
   <div class="section2">
     <div class="div-display">
       <div class="duvida">
@@ -43,5 +42,23 @@ export default {
   </div>
   <div class="section3">
     <h2 class="filmes">filmes</h2>
+    <nav class="nav-filtros">
+      <div class="filtros">
+        <div class="pesquisadiv">
+          <label for="pesquisa">pesquise</label>
+          <input type="text" id="pesquisa" />
+        </div>
+        <div class="selects">
+          <div class="casa">
+            <label for="">categoria</label>
+            <select name="" id=""></select>
+          </div>
+          <div class="casa">
+            <label for="">saga</label>
+            <select name="" id=""></select>
+          </div>
+        </div>
+      </div>
+    </nav>
   </div>
 </template>
