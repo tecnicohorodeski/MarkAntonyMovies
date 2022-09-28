@@ -2,6 +2,14 @@
   margin: 0;
   padding: 0;
 }
+.filmes-filtros{
+  display: flex;
+  border-radius: 15px;
+  border: 2px solid rgb(57, 57, 182);
+  padding: 25px;
+  align-items: center;
+  justify-content: space-around;
+}
 body {
   height: 100vh;
   font-family: 'Noto Sans Buhid', sans-serif;
@@ -46,6 +54,8 @@ strong {
 }
 label{
   font-size: 1.3em;
+  width: 204px;
+  font-weight: bold;
   margin-bottom: 5px;
 }
 .casa{
@@ -58,9 +68,15 @@ label{
   flex-direction: column;
   margin: 0 25px;
 }
+input {
+  height: 25px;
+}
 .selects {
   display: flex;
   flex-direction: row;
+}
+select {
+  height: 28px;
 }
 .nav-filtros {
   color: white;
