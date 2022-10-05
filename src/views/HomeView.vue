@@ -55,8 +55,6 @@ export default {
       </div>
     </div>
   </div>
-  <div class="section3">
-    <FilmesComp />
-  </div>
+  <FilmesComp />
   <FooterComp />
 </template>

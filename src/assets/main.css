@@ -47,8 +47,8 @@ strong {
   flex-direction: column;
 }
 .tg {
-  width: 387px;
-  height: 458px;
+  width: 550px;
+  height: 641px;
   border-radius: 15px;
   display: flex;
   background: url("src/assets/img/thegodfather.jpg");
@@ -149,12 +149,30 @@ i{
   flex-direction: row;
   align-items: center;
 }
+.filmes-linhas {
+  display: flex;
+  justify-content: center;
+}
+.PoEmh3{
+  font-size: 2.5em;
+}
+.cardfilmes {
+  width: 155px;
+  background-color: rgb(13 49 149);
+  margin: 20px 10px;
+  height: 229px;
+  border-radius: 6px;
+}
 .section3 {
   background-color: black;
   margin: 25px 25px 0px 25px;
   height: 80vh;
+  color: white;
+  display: flex;
   padding: 45px;
   border-radius: 25px 25px 0px 0px;
+  justify-content: space-evenly;
+  align-items: center;
 }
 .section2 {
   border-bottom: 7vh solid rgb(13 49 149);
