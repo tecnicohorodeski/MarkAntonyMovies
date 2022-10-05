@@ -5,7 +5,7 @@
 .filmes-filtros{
   display: flex;
   border-radius: 15px;
-  border: 2px solid rgb(57, 57, 182);
+  border: 2px solid rgb(13 49 149);
   padding: 25px;
   align-items: center;
   justify-content: space-around;
@@ -24,12 +24,19 @@ header {
   align-items: center;
   box-shadow: 0px 20px 35px rgb(0 0 0 / 5%);
 }
+p {
+  font-size: 1.3em;
+}
 h1 {
   font-family: 'Fira Sans', sans-serif;
   color: rgb(255, 255, 255);
 }
+.sublinhader{
+  text-decoration: underline;
+  color: white;
+}
 strong {
-  color: rgb(57, 57, 182);
+  color: rgb(13 49 149);
 }
 .infos {
   padding-left: 75px;
@@ -38,6 +45,16 @@ strong {
 .div-cards {
   display: flex;
   flex-direction: column;
+}
+.tg {
+  width: 387px;
+  height: 458px;
+  border-radius: 15px;
+  display: flex;
+  background: url("src/assets/img/thegodfather.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .django {
   width: 720px;
@@ -79,6 +96,20 @@ input {
 select {
   height: 28px;
 }
+.footer {
+  display: flex;
+  background-color: rgb(13 49 149);
+  border-top: 5vh solid rgb(255 255 255);
+  color: white;
+  height: 20vh;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.github, .mam{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .nav-filtros {
   color: white;
 }
@@ -91,7 +122,7 @@ select {
   align-items: center;
 }
 .cards:hover {
-  border: 2px solid rgb(57, 57, 182);
+  border: 2px solid rgb(13 49 149);
   transition: 0.5s all ease;
 }
 i{
@@ -101,6 +132,7 @@ i{
 }
 .div-display {
   display: flex;
+  padding: 100px;
 }
 .filmes{
   color: white;
@@ -111,21 +143,22 @@ i{
   display: flex;
   border-radius: 15px;
   padding: 14px;
-  width: 100%;
+  width: 91%;
   height: 80px;
-  margin: 10px 25px;
+  margin: 10px 0px 10px 25px;
   flex-direction: row;
   align-items: center;
 }
 .section3 {
   background-color: black;
-  margin: 25px;
+  margin: 25px 25px 0px 25px;
   height: 80vh;
   padding: 45px;
+  border-radius: 25px 25px 0px 0px;
 }
 .section2 {
-  border-bottom: 7vh solid rgb(57, 57, 182);
-  border-top: 7vh solid rgb(57, 57, 182);
+  border-bottom: 7vh solid rgb(13 49 149);
+  border-top: 7vh solid rgb(13 49 149);
   background-color: black;
   width: 100%;
   display: flex;
@@ -170,12 +203,12 @@ h2{
 }
 .links a:hover{
   background-color: rgba(0, 0, 0, 0.034);
-  border-bottom: 3px solid rgb(57, 57, 182);
+  border-bottom: 3px solid rgb(13 49 149);
 }
 button {
   margin-top: 25px;
   padding: 2% 6%;
-  background-color:  rgb(57, 57, 182);
+  background-color:  rgb(13 49 149);
   border: none;
   color: white;
   font-weight: bold;
