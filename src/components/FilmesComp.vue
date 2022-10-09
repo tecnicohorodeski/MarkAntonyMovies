@@ -1,10 +1,14 @@
 <script>
 import CardFilmesComp from "./CardFilmesComp.vue";
-export default { components: { CardFilmesComp } };
+export default {
+  components: {
+    CardFilmesComp,
+  },
+};
 </script>
 <template>
   <div class="section3">
-    <div class="filmes-homeview">
+    <div>
       <div>
         <h3 class="PoEmh3">Populares</h3>
         <div class="filmes-linhas">

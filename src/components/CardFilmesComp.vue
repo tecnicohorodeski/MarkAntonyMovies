@@ -1,8 +1,10 @@
 <script>
-export default {};
+export default {
+  props: {
+    poster: String,
+  },
+};
 </script>
 <template>
-  <div class="cardfilmes">
-    <h4>filmes</h4>
-  </div>
+  <img class="cardfilmes" :src="poster" />
 </template>

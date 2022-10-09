@@ -10,7 +10,7 @@ export default {
     imgComp,
     FooterComp,
     FilmesComp,
-},
+  },
 };
 </script>
 
@@ -36,7 +36,7 @@ export default {
   </div>
   <div class="section2">
     <div class="div-display">
-      <div class="duvida">
+      <div>
         <imgComp />
       </div>
       <div class="div-cards">

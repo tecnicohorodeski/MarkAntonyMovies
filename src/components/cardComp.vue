@@ -10,7 +10,7 @@ export default {
 </script>
 <template>
   <div class="cards">
-    <img :src="picture_src" />
+    <img class="icones" :src="picture_src" />
     <h3>{{ dicas }}</h3>
   </div>
 </template>
