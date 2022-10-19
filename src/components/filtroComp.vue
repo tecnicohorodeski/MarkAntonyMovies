@@ -1,5 +1,23 @@
 <script>
-import FilmeApi from "@/api/filmes.js";
+import GenerosApi from "@/api/genero.js";
+import IdiomasApi from "@/api/idiomas.js";
+const idiomasApi = new IdiomasApi();
+const generosApi = new GenerosApi();
+export default {
+  data() {
+    return {
+      idiomas: [],
+      idioma: "",
+      genero: "",
+      generos: [],
+    };
+  },
+  async created() {
+    this.generos = await generosApi.buscarTodosOsGeneros();
+    this.idiomas = await idiomasApi.buscarTodosOsIdiomas();
+  },
+};
+/* import FilmeApi from "@/api/filmes.js";
 import GeneroApi from "@/api/genero.js";
 const filmeApi = new FilmeApi();
 const generoApi = new GeneroApi();
@@ -25,6 +43,7 @@ export default {
     },
   },
 };
+*/
 </script>
 <template>
   <div class="todofiltro">
@@ -36,20 +55,38 @@ export default {
       </div>
       <div class="sel-filtros">
         <label for="genre">Gêneros</label>
-        <select v-model="movie.genre" name="" id="genre">
+        <select v-model="generos" id="genre">
           <option disabled value="">Escolha um gênero</option>
-          <option v-for="genre of genres" :key="genre.id" :value="genre.name">
-            {{ genre.name }}
+          <option v-for="genero of generos" :key="genero.id" :value="genero.id">
+            {{ genero.name }}
           </option>
         </select>
       </div>
       <div class="sel-filtros">
-        <label for="">Idiomas</label>
-        <select name="" id=""></select>
+        <label for="lg">Idiomas</label>
+        <select v-model="idiomas" id="lg">
+          <option disabled value="">Escolha um gênero</option>
+          <option
+            v-for="idioma of idiomas"
+            :key="idioma.iso_639_1"
+            :value="idioma.iso_639_1"
+          >
+            {{ idioma.iso_639_1 }}
+          </option>
+        </select>
       </div>
       <div class="sel-filtros">
         <label for="">Classificação</label>
-        <select name="" id=""></select>
+        <select v-model="generos" id="genre">
+          <option disabled value="">Escolha um gênero</option>
+          <option
+            v-for="genero of generos"
+            :key="genero.iso_639_1"
+            :value="genero.iso_639_1"
+          >
+            {{ genero.iso_639_1 }}
+          </option>
+        </select>
       </div>
       <button @click="buscar">Buscar</button>
     </div>
