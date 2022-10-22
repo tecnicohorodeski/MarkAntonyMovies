@@ -4,6 +4,17 @@ export default {
   components: {
     CardFilmesComp,
   },
+  data() {
+    return {
+      filmes: [],
+      filme: {},
+    };
+  },
+  methods: {
+    getPosterUrl(posterPath) {
+      return `https://image.tmdb.org/t/p/w500${posterPath}`;
+    },
+  },
 };
 </script>
 <template>
@@ -12,7 +23,11 @@ export default {
       <div>
         <h3 class="PoEmh3">Populares</h3>
         <div class="filmes-linhas">
-          <CardFilmesComp />
+          <CardFilmesComp
+            v-for="filme of filmes"
+            :key="filme.id"
+            :poster="getPosterUrl(filme.poster_path)"
+          />
           <CardFilmesComp />
           <CardFilmesComp />
           <CardFilmesComp />

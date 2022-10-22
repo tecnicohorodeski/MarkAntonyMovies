@@ -206,6 +206,7 @@ i{
 /*filmes pgn*/
 .filmes{
   display: flex;
+  flex-direction: column;
 }
 .todos-filmes {
   display: flex;
@@ -217,6 +218,9 @@ i{
 /*filtro*/
 h3{
   font-size: 1.5em;
+}
+.button-fil{
+  margin-top: 0;
 }
 input, select {
   height: 25px;
@@ -231,8 +235,10 @@ input, select {
   align-items: center;
   justify-content: space-around;
 }
-.filtros {
+.tudo {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 label{
   font-size: 1.1em;
@@ -246,8 +252,7 @@ label{
   flex-direction: column;
 }
 .todofiltro{
-  margin: 25px;
-  width: 25%;
+  margin: 25px 25px 10px 25px;
 }
 .filtro{
   color: white;
@@ -257,12 +262,20 @@ label{
   border-left: 15px solid rgb(13 49 149);
   background-color: black;
   flex-direction: column;
-  align-items: flex-start;
 }
 
 
-
-
-
-
-
+/*filtro dos artistas */
+#filtro-pessoa{
+  width: 50%;
+}
+#tfp{
+  display: flex;
+  justify-content: center;
+}
+#slp {
+  align-items: stretch;
+}
+.people-label{
+  width: 500px;
+}
