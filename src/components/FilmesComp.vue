@@ -1,5 +1,7 @@
 <script>
 import CardFilmesComp from "./CardFilmesComp.vue";
+import FilmeApi from "../api/filmes.js";
+const filmeapi = new FilmeApi();
 export default {
   components: {
     CardFilmesComp,
@@ -7,11 +9,16 @@ export default {
   data() {
     return {
       filmes: [],
+      filmesPop: [],
       filme: {},
     };
   },
+  async created() {
+    this.filmes = await filmeapi.BuscarTodosOs4Filmes();
+    this.filmesPop = await filmeapi.BuscarTodosEmCartaz();
+  },
   methods: {
-    getPosterUrl(posterPath) {
+    getPosterUrl(posterPath) { 
       return `https://image.tmdb.org/t/p/w500${posterPath}`;
     },
   },
@@ -28,18 +35,16 @@ export default {
             :key="filme.id"
             :poster="getPosterUrl(filme.poster_path)"
           />
-          <CardFilmesComp />
-          <CardFilmesComp />
-          <CardFilmesComp />
         </div>
       </div>
       <div>
         <h3 class="PoEmh3">Em cartaz</h3>
         <div class="filmes-linhas">
-          <CardFilmesComp />
-          <CardFilmesComp />
-          <CardFilmesComp />
-          <CardFilmesComp />
+          <CardFilmesComp
+            v-for="filme of filmesPop"
+            :key="filme.id"
+            :poster="getPosterUrl(filme.poster_path)"
+          />
         </div>
       </div>
     </div>
