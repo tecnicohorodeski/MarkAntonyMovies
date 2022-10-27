@@ -1,6 +1,4 @@
 <script>
-/*testando*/
-import axios from "axios";
 import CardFilmesComp from "../components/CardFilmesComp.vue";
 import FiltroComp from "../components/filtroComp.vue";
 import FilmeApi from "../api/filmes.js";
@@ -16,24 +14,15 @@ export default {
     this.filmes = await filmeapi.BuscarTodosOsFilmes();
   },
   methods: {
-    getPosterUrl(profile_path) {
-      return `https://image.tmdb.org/t/p/w500${profile_path}`;
-    },
-    async buscar(filme) {
-      if (filme === "") {
-        this.filmes = await filmeapi.BuscarTodosOsFilmes();
-      } else {
-        const url = `https://api.themoviedb.org/3/search/movie?api_key=df0a1976ab5aa969146a8dbff08f0123&language=pt-BR&query=${filme}&page=1&include_adult=false`;
-        const { data } = await axios.get(url);
-        this.filmes = data.results;
-      }
+    getPosterUrl(posterPath) {
+      return `https://image.tmdb.org/t/p/w500${posterPath}`;
     },
   },
 };
 </script>
 <template>
   <div class="filmes">
-    <FiltroComp @buscar="buscar" />
+    <FiltroComp />
     <div class="todos-filmes">
       <CardFilmesComp
         v-for="filme of filmes"

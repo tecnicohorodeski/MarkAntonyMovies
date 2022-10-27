@@ -1,5 +1,5 @@
 <script>
-import axios from 'axios'
+import axios from "axios";
 import CardFilmesComp from "../components/CardFilmesComp.vue";
 import FiltroPessoaComp from "../components/filtroPeopleComp.vue";
 import ArtistasApi from "../api/artistas.js";
@@ -19,8 +19,8 @@ export default {
       return `https://image.tmdb.org/t/p/w500${profile_path}`;
     },
     async buscar(artista) {
-      if (artista === '') {
-        this.artistas =  await artistasapi.BuscarTodosOsArtistas()
+      if (artista === "") {
+        this.artistas = await artistasapi.BuscarTodosOsArtistas();
       } else {
         const url = `https://api.themoviedb.org/3/search/person?api_key=df0a1976ab5aa969146a8dbff08f0123&language=en-US&query=${artista}&page=1&include_adult=false`;
         const { data } = await axios.get(url);
@@ -54,7 +54,7 @@ export default {
     <div class="todos-filmes">
       <CardFilmesComp
         v-for="artista of artistas"
-        :key="artista.artista"
+        :key="artista.id"
         :poster="getPosterUrl(artista.profile_path)"
       />
     </div>
