@@ -1,11 +1,11 @@
 <script>
 import axios from "axios";
-import CardFilmesComp from "../components/CardFilmesComp.vue";
+import CardPessoaComp from "../components/CardPessoaComp.vue";
 import FiltroPessoaComp from "../components/filtroPeopleComp.vue";
 import ArtistasApi from "../api/artistas.js";
 const artistasapi = new ArtistasApi();
 export default {
-  components: { CardFilmesComp, FiltroPessoaComp },
+  components: { CardPessoaComp, FiltroPessoaComp },
   data() {
     return {
       artistas: [],
@@ -52,8 +52,10 @@ export default {
   <FiltroPessoaComp @buscar="buscar" />
   <div class="filmes">
     <div class="todos-filmes">
-      <CardFilmesComp
+      <CardPessoaComp
         v-for="artista of artistas"
+        :nome_fsa="artista.name"
+        :link_filme="filme"
         :key="artista.id"
         :poster="getPosterUrl(artista.profile_path)"
       />

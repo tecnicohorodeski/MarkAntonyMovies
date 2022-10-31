@@ -265,7 +265,12 @@ i{
   height: 100vh;
   width: 100%;
 }
+
+
 /*filtro*/
+form{
+  display: flex;
+}
 h3{
   font-size: 1.5em;
 }
