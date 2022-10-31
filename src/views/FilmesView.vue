@@ -4,15 +4,25 @@ import axios from "axios";
 import CardFilmesComp from "../components/CardFilmesComp.vue";
 import FiltroComp from "../components/filtroComp.vue";
 import FilmeApi from "../api/filmes.js";
+import FiltrosApi from "../api/filtros.js";
+const filtrosapi = new FiltrosApi();
 const filmeapi = new FilmeApi();
 export default {
   components: { CardFilmesComp, FiltroComp },
   data() {
     return {
       filmes: [],
+      idiomas: [],
+      classificacoes: [],
+      classificacao: "",
+      idioma: "",
+      generos: [],
     };
   },
   async created() {
+    this.generos = await filtrosapi.buscarTodosOsGeneros();
+    this.classificacoes = await filtrosapi.buscarTodasAsClassificacoes();
+    this.idiomas = await filtrosapi.buscarTodosOsIdiomas();
     this.filmes = await filmeapi.BuscarTodosOsFilmes();
   },
   methods: {
@@ -37,7 +47,9 @@ export default {
     <div class="todos-filmes">
       <CardFilmesComp
         v-for="filme of filmes"
+        :nome_fsa="filme.title"
         :key="filme.id"
+        :link_filme="filme"
         :poster="getPosterUrl(filme.poster_path)"
       />
     </div>

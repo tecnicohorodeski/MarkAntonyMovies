@@ -10,10 +10,10 @@ export default {};
         </router-link>
       </div>
       <div class="links">
-        <router-link to="/filmes"> Filmes </router-link>
-        <router-link to="/series"> Séries </router-link>
-        <router-link to="/artistas"> Artistas </router-link>
-        <a href="#">Sobre</a>
+        <router-link class="links-router" to="/filmes"> Filmes </router-link>
+        <router-link class="links-router" to="/series"> Séries </router-link>
+        <router-link class="links-router" to="/artistas"> Artistas </router-link>
+        <a class="links-router" href="#">Sobre</a>
       </div>
     </nav>
   </header>

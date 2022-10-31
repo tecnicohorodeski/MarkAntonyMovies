@@ -1,14 +1,12 @@
 <script>
 import CardComp from "../components/cardComp.vue";
 import imgComp from "../components/imgComp.vue";
-import FooterComp from "../components/FooterComp.vue";
 import FilmesComp from "../components/FilmesComp.vue";
 export default {
   name: "app",
   components: {
     CardComp,
     imgComp,
-    FooterComp,
     FilmesComp,
   },
 };
@@ -56,5 +54,4 @@ export default {
     </div>
   </div>
   <FilmesComp />
-  <FooterComp />
 </template>

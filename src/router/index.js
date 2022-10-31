@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "@/views/HomeView.vue";
 import FilmesView from "@/views/FilmesView.vue";
+import FilmeView from "@/views/FilmeView.vue";
 import ArtistasView from "@/views/ArtistasView.vue";
 import SeriesView from "@/views/SeriesView.vue";
 
@@ -11,6 +12,12 @@ const router = createRouter({
       path: "/",
       name: "home",
       component: HomeView,
+    },
+    {
+      path: "/filmes/:id",
+      nome: "filme",
+      component: FilmeView,
+      props: true,
     },
     {
       path: "/filmes",

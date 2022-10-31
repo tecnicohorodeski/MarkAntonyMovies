@@ -34,7 +34,7 @@ header nav {
   width: 90%;
   justify-content: space-between;
 }
-a{
+.links-router{
   font-size: 21px;
   margin: 0 25px;
   color: rgb(255, 255, 255);
@@ -195,16 +195,28 @@ i{
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+/*filmes pgn*/
+.filmes{
+  display: flex;
+  flex-direction: column;
+}
+.todos-filmes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 .cardfilmes {
-  width: 169px;
   background-color: rgb(13 49 149);
-  margin: 20px 10px;
-  height: 242px;
+  display: block;
+  width: 100%;
+  height: auto;
   border-radius: 6px;
 }
 .container {
+  margin: 10px 10px;
   position: relative;
-  width: 50%;
+  width: 13%;
 }
 
 .image {
@@ -220,12 +232,18 @@ i{
   left: 0;
   right: 0;
   height: 100%;
+  border-radius: 6px;
   width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background-color: #008CBA;
+  background-color: rgb(13 49 149);
 }
-
+.verMais{
+  padding: 8% 8%;
+  background-color: rgb(255 255 255);
+  color: #2f00ff;
+  cursor: pointer;
+}
 .container:hover .overlay {
   opacity: 1;
 }
@@ -242,18 +260,11 @@ i{
   text-align: center;
 }
 
-/*filmes pgn*/
-.filmes{
-  display: flex;
-  flex-direction: column;
+/*Página do filme*/
+.poster {
+  height: 100vh;
+  width: 100%;
 }
-.todos-filmes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-
 /*filtro*/
 h3{
   font-size: 1.5em;
