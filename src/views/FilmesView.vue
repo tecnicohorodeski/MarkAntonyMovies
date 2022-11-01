@@ -3,10 +3,10 @@
 import axios from "axios";
 import CardFilmesComp from "../components/CardFilmesComp.vue";
 import FiltroComp from "../components/filtroComp.vue";
-import FilmeApi from "../api/filmes.js";
 import FiltrosApi from "../api/filtros.js";
-const filtrosapi = new FiltrosApi();
+import FilmeApi from "../api/filmes.js";
 const filmeapi = new FilmeApi();
+const filtrosapi = new FiltrosApi();
 export default {
   components: { CardFilmesComp, FiltroComp },
   data() {

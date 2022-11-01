@@ -4,6 +4,9 @@
   margin: 0;
   padding: 0;
 }
+main{
+  height: 100vh;
+}
 body {
   height: 100vh;
   font-family: 'Noto Sans Buhid', sans-serif;
