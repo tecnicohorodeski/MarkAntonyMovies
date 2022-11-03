@@ -5,7 +5,8 @@
   padding: 0;
 }
 main{
-  height: 100vh;
+    display: flex;
+    justify-content: center;
 }
 body {
   height: 100vh;
@@ -29,7 +30,7 @@ h1 {
   color: rgb(255, 255, 255);
 }
 strong {
-  color: rgb(13 49 149);
+  color: #2f00ff;
 }
 header nav {
   display: flex;
@@ -53,12 +54,12 @@ h2{
 }
 .links a:hover{
   background-color: rgba(0, 0, 0, 0.034);
-  border-bottom: 3px solid rgb(13 49 149);
+  border-bottom: 3px solid #2f00ff;
 }
 button {
   margin-top: 25px;
   padding: 2% 6%;
-  background-color:  rgb(13 49 149);
+  background-color:  #2f00ff;
   border: none;
   color: white;
   font-weight: bold;
@@ -66,7 +67,7 @@ button {
 }
 .footer {
   display: flex;
-  background-color: rgb(13 49 149);
+  background-color: #2f00ff;
   border-top: 5vh solid rgb(255 255 255);
   color: white;
   height: 20vh;
@@ -121,8 +122,8 @@ i{
   align-items: center;
 }
 .section2 {
-  border-bottom: 7vh solid rgb(13 49 149);
-  border-top: 7vh solid rgb(13 49 149);
+  border-bottom: 7vh solid #2f00ff;
+  border-top: 7vh solid #2f00ff;
   background-color: black;
   width: 100%;
   display: flex;
@@ -155,7 +156,7 @@ i{
   align-items: center;
 }
 .cards:hover {
-  border: 2px solid rgb(13 49 149);
+  border: 2px solid #2f00ff;
   transition: 0.5s all ease;
 }
 .django {
@@ -174,7 +175,7 @@ i{
 .section3 {
   background-color: black;
   margin: 25px 25px 0px 25px;
-  height: 103vh;
+  height: 115vh;
   color: white;
   display: flex;
   padding: 45px;
@@ -184,16 +185,19 @@ i{
 .PoEmh3{
   font-size: 2.5em;
 }
+#section3-container{
+  width: 21%;
+}
 .filmes-linhas {
   display: flex;
   justify-content: center;
 }
 .tg {
-  width: 392px;
-  height: 593px;
+  width: 433px;
+  height: 670px;
   border-radius: 15px;
   display: flex;
-  background: url("src/assets/img/thegodfather.jpg");
+  background: url("src/assets/img/chaplin.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -210,7 +214,7 @@ i{
   justify-content: center;
 }
 .cardfilmes {
-  background-color: rgb(13 49 149);
+  background-color: #2f00ff;
   display: block;
   width: 100%;
   height: auto;
@@ -239,7 +243,7 @@ i{
   width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background-color: rgb(13 49 149);
+  background-color: #2f00ff;
 }
 .verMais{
   padding: 8% 8%;
@@ -265,8 +269,23 @@ i{
 
 /*Página do filme*/
 .poster {
-  height: 100vh;
-  width: 100%;
+  height: 84vh;
+  width: 32%;
+  margin: 0 48px;
+}
+.dcd{
+  display: flex;
+  justify-content: space-evenly;
+}
+.nomefilme {
+  padding-left: 15px;
+  border-left: 7px solid #2f00ff;
+}
+.infosFilme {
+  display: flex;
+  color: white;
+  width: 85%;
+  margin: 52px 0;
 }
 
 
@@ -288,7 +307,7 @@ input, select {
 .filmes-filtros{
   display: flex;
   border-radius: 15px;
-  border: 2px solid rgb(13 49 149);
+  border: 2px solid #2f00ff;
   padding: 25px;
   align-items: center;
   justify-content: space-around;
@@ -317,7 +336,7 @@ label{
   padding: 25px;
   border-radius: 15px;
   display: flex;
-  border-left: 15px solid rgb(13 49 149);
+  border-left: 15px solid #2f00ff;
   background-color: black;
   flex-direction: column;
 }

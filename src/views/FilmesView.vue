@@ -26,8 +26,8 @@ export default {
     this.filmes = await filmeapi.BuscarTodosOsFilmes();
   },
   methods: {
-    getPosterUrl(profile_path) {
-      return `https://image.tmdb.org/t/p/w500${profile_path}`;
+    getPosterUrl(poster_path) {
+      return `https://image.tmdb.org/t/p/w500${poster_path}`;
     },
     async buscar(filme) {
       if (filme === "") {

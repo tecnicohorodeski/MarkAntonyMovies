@@ -1,10 +1,10 @@
 <script>
-import CardFilmesComp from "./CardFilmesComp.vue";
+import CardFilmesSection3 from "./CardFilmesSection3.vue";
 import FilmeApi from "../api/filmes.js";
 const filmeapi = new FilmeApi();
 export default {
   components: {
-    CardFilmesComp,
+    CardFilmesSection3,
   },
   data() {
     return {
@@ -18,8 +18,8 @@ export default {
     this.filmesPop = await filmeapi.BuscarTodosEmCartaz();
   },
   methods: {
-    getPosterUrl(posterPath) { 
-      return `https://image.tmdb.org/t/p/w500${posterPath}`;
+    getPosterUrl(poster_path) {
+      return `https://image.tmdb.org/t/p/w500${poster_path}`;
     },
   },
 };
@@ -30,19 +30,23 @@ export default {
       <div>
         <h3 class="PoEmh3">Populares</h3>
         <div class="filmes-linhas">
-          <CardFilmesComp
+          <CardFilmesSection3
             v-for="filme of filmes"
             :key="filme.id"
+            :link_filme="filme"
             :poster="getPosterUrl(filme.poster_path)"
+            :nome_fsa="filme.title"
           />
         </div>
       </div>
       <div>
         <h3 class="PoEmh3">Em cartaz</h3>
         <div class="filmes-linhas">
-          <CardFilmesComp
+          <CardFilmesSection3
             v-for="filme of filmesPop"
+            :link_filme="filme"
             :key="filme.id"
+            :nome_fsa="filme.title"
             :poster="getPosterUrl(filme.poster_path)"
           />
         </div>
@@ -50,8 +54,9 @@ export default {
     </div>
     <div class="tg">
       <h2 class="imagem-h2">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-        expedita aliquam fugiat
+        "A finalidade do cinema é a de nos transportar ao reino da beleza.”
+        <br />
+        -Charles Chaplin
       </h2>
     </div>
   </div>
