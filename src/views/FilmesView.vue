@@ -29,11 +29,14 @@ export default {
     getPosterUrl(poster_path) {
       return `https://image.tmdb.org/t/p/w500${poster_path}`;
     },
-    async buscar(filme) {
-      if (filme === "") {
+    async buscar(params) {
+      if (params.genero !== "") {
+        this.filmes = await filmeapi.BuscarFilmesPorGenero(params.genero);
+      }
+      else if (params.filme === "") {
         this.filmes = await filmeapi.BuscarTodosOsFilmes();
       } else {
-        const url = `https://api.themoviedb.org/3/search/movie?api_key=df0a1976ab5aa969146a8dbff08f0123&language=pt-BR&query=${filme}&page=1&include_adult=false`;
+        const url = `https://api.themoviedb.org/3/search/movie?api_key=df0a1976ab5aa969146a8dbff08f0123&language=pt-BR&query=${params.filme}&page=1&include_adult=false`;
         const { data } = await axios.get(url);
         this.filmes = data.results;
       }

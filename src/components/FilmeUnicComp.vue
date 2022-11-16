@@ -25,6 +25,7 @@ export default {
     data_lancamento: Number,
     duracao: Number,
     genero_filme: String,
+    generos: Array,
   },
   async created() {
     this.genres = await filtrosapi.buscarTodosOsGeneros();
@@ -50,6 +51,11 @@ export default {
           <div class="dcd">
             <h3>{{ data_lancamento }}</h3>
             <h3>{{ duracao }} minutos</h3>
+            <div class="generos-div">
+              <h3 class="genero-h3" v-for="genero of generos" :key="genero.id">
+                {{ genero.name }}
+              </h3>
+            </div>
             <!--
               <h3 v-for="genre in genres" :key="genre.id">
                 {{ genre.name }}
@@ -63,7 +69,7 @@ export default {
           </p>
         </div>
         <div class="elenco">
-          <h2>Elenco</h2>
+          <h2 class="elenco-h2">Elenco</h2>
           <CardPessoaComp
             v-for="artista of artistas"
             :nome_fsa="artista.name"

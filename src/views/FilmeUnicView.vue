@@ -39,6 +39,7 @@ export default {
       :data_lancamento="filme.release_date"
       :duracao="filme.runtime"
       :sinopse_filme="filme.overview"
+      :generos="filme.genres"
       :key="filme.id"
       :poster="getPosterUrl(filme.poster_path)"
     />

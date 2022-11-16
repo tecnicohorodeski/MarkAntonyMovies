@@ -28,6 +28,7 @@ p {
 h1 {
   font-family: 'Fira Sans', sans-serif;
   color: rgb(255, 255, 255);
+  font-size: 3em;
 }
 strong {
   color: #2f00ff;
@@ -65,6 +66,9 @@ button {
   font-weight: bold;
   border-radius: 15px;
 }
+button:hover{
+  cursor: pointer;
+}
 .footer {
   display: flex;
   background-color: #2f00ff;
@@ -77,6 +81,7 @@ button {
 .github, .mam{
   display: flex;
   flex-direction: column;
+  color: white;
   align-items: center;
 }
 i{
@@ -287,7 +292,15 @@ i{
   width: 85%;
   margin: 52px 0;
 }
-
+.elenco-h2 {
+  background-color: #2f00ff;
+}
+.generos-div {
+  display: flex;
+}
+.genero-h3 {
+  margin: 0px 10px;
+}
 
 /*filtro*/
 form{

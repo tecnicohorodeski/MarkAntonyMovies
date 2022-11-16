@@ -30,4 +30,10 @@ export default class FilmeApi {
     );
     return response.data.results.slice(0, 4);
   }
+  async BuscarFilmesPorGenero(genero) {
+    const response = await axios.get(
+      `https://api.themoviedb.org/3/movie/popular?api_key=df0a1976ab5aa969146a8dbff08f0123&language=pt-BR&page=1&with_genres=${genero}`
+    );
+    return response.data.results;
+  }
 }

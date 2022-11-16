@@ -1,10 +1,10 @@
 <script>
-import CardFilmesComp from "../components/CardFilmesComp.vue";
+import CardSeriesComp from "../components/CardSeriesComp.vue";
 import FiltroComp from "../components/filtroComp.vue";
 import SeriesApi from "../api/series.js";
 const seriesapi = new SeriesApi();
 export default {
-  components: { CardFilmesComp, FiltroComp },
+  components: { CardSeriesComp, FiltroComp },
   data() {
     return {
       series: [],
@@ -24,7 +24,7 @@ export default {
   <div class="filmes">
     <FiltroComp />
     <div class="todos-filmes">
-      <CardFilmesComp
+      <CardSeriesComp
         v-for="serie of series"
         :key="serie.id"
         :poster="getPosterUrl(serie.poster_path)"
