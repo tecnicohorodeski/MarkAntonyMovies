@@ -278,6 +278,13 @@ i{
   width: 32%;
   margin: 0 48px;
 }
+.TudoDaPaginaUnica{
+  display: flex;
+}
+.BelissimaClasseOndeVaiConterTodaEssaEnormePagina{
+  display: flex;
+  flex-direction: column;
+}
 .dcd{
   display: flex;
   justify-content: space-evenly;
@@ -301,6 +308,11 @@ i{
 .genero-h3 {
   margin: 0px 10px;
 }
+.genero-h3:hover {
+  cursor: pointer;
+  color: #919191;
+  text-decoration: underline solid #2f00ff;
+}
 
 /*filtro*/
 form{
@@ -315,6 +327,7 @@ h3{
 input, select {
   height: 25px;
   border: none;
+  width: 100%;
   border-radius: 10px;
 }
 .filmes-filtros{
@@ -328,7 +341,6 @@ input, select {
 .tudo {
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 label{
   font-size: 1.1em;

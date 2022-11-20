@@ -1,7 +1,7 @@
 <script>
-import CardComp from "../components/cardComp.vue";
-import imgComp from "../components/imgComp.vue";
-import FilmesComp from "../components/FilmesComp.vue";
+import CardComp from "../components/cards/cardComp.vue";
+import imgComp from "../components/filmes/imgComp.vue";
+import FilmesComp from "../components/filmes/FilmesComp.vue";
 export default {
   name: "app",
   components: {

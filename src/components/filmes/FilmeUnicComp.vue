@@ -1,8 +1,7 @@
 <script>
 import axios from "axios";
-import CardPessoaComp from "../components/CardPessoaComp.vue";
-import FilmeApi from "../api/filmes.js";
-import FiltrosApi from "../api/filtros.js";
+import FilmeApi from "../../api/filmes.js";
+import FiltrosApi from "../../api/filtros.js";
 const filtrosapi = new FiltrosApi();
 const filmeapi = new FilmeApi();
 export default {
@@ -13,14 +12,14 @@ export default {
       name: {},
       artistas: [],
       artista: {},
+      filme: "",
     };
   },
-  components: {
-    CardPessoaComp,
-  },
+  components: {},
   props: {
     poster: String,
     nome_filme: String,
+    filme_id: Number,
     sinopse_filme: String,
     data_lancamento: Number,
     duracao: Number,
@@ -30,9 +29,13 @@ export default {
   async created() {
     this.genres = await filtrosapi.buscarTodosOsGeneros();
     this.filmes = await filmeapi.BuscarTodosOsFilmes();
-    const url = `https://api.themoviedb.org/3/movie/${this.id}/credits?api_key=df0a1976ab5aa969146a8dbff08f0123&language=pt-BR`;
+    //this.artistas = await filmeapi.buscarElenco();
+    const url = `https://api.themoviedb.org/3/movie/${this.id}?api_key=a37701b7a0845f3785cd83eb23add599&language=pt-BR`;
     const { data } = await axios.get(url);
-    this.artistas = data;
+    this.filme = data;
+    // const url = `https://api.themoviedb.org/3/movie/${this.id}/credits?api_key=df0a1976ab5aa969146a8dbff08f0123&language=pt-BR`;
+    // const { data } = await axios.get(url);
+    // this.artista = data;
   },
   methods: {
     getPosterUrl(profile_path) {
@@ -44,7 +47,6 @@ export default {
 <template>
   <main>
     <div class="infosFilme">
-      <img class="poster" :src="poster" alt="" />
       <div class="todasinfos">
         <div class="ndcd">
           <h2 class="nomefilme">{{ nome_filme }}</h2>
@@ -56,26 +58,12 @@ export default {
                 {{ genero.name }}
               </h3>
             </div>
-            <!--
-              <h3 v-for="genre in genres" :key="genre.id">
-                {{ genre.name }}
-              </h3>
-            -->
           </div>
         </div>
         <div class="sinopse">
           <p>
             {{ sinopse_filme }}
           </p>
-        </div>
-        <div class="elenco">
-          <h2 class="elenco-h2">Elenco</h2>
-          <CardPessoaComp
-            v-for="artista of artistas"
-            :nome_fsa="artista.name"
-            :key="artista.id"
-            :poster="getPosterUrl(artista.profile_path)"
-          />
         </div>
       </div>
     </div>

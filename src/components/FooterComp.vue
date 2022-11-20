@@ -7,10 +7,10 @@ export default {};
       <h1>MAM</h1>
       <h3>Mark Antony Movies</h3>
     </div>
-    <a href="https://github.com/geossophia">
+    <a href="https://github.com/horodeski">
       <div class="github">
         <i class="bx bxl-github"></i>
-        <h5>geossophia</h5>
+        <h4>horodeski</h4>
       </div>
     </a>
   </div>

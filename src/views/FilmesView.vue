@@ -1,28 +1,26 @@
 <script>
 /*testando*/
 import axios from "axios";
-import CardFilmesComp from "../components/CardFilmesComp.vue";
-import FiltroComp from "../components/filtroComp.vue";
-import FiltrosApi from "../api/filtros.js";
+import CardFilmesComp from "../components/cards/CardFilmesComp.vue";
+import FiltroComp from "../components/filtros/filtroComp.vue";
 import FilmeApi from "../api/filmes.js";
-const filmeapi = new FilmeApi();
+import FiltrosApi from "../api/filtros.js";
 const filtrosapi = new FiltrosApi();
+const filmeapi = new FilmeApi();
 export default {
   components: { CardFilmesComp, FiltroComp },
   data() {
     return {
       filmes: [],
-      idiomas: [],
       classificacoes: [],
       classificacao: "",
-      idioma: "",
+      linguagens: [],
       generos: [],
     };
   },
   async created() {
     this.generos = await filtrosapi.buscarTodosOsGeneros();
     this.classificacoes = await filtrosapi.buscarTodasAsClassificacoes();
-    this.idiomas = await filtrosapi.buscarTodosOsIdiomas();
     this.filmes = await filmeapi.BuscarTodosOsFilmes();
   },
   methods: {

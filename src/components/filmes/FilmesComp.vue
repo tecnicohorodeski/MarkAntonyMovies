@@ -1,11 +1,12 @@
 <script>
-import CardFilmesSection3 from "./CardFilmesSection3.vue";
-import FilmeApi from "../api/filmes.js";
+import CardFilmesSection3 from "../cards/CardFilmesSection3.vue";
+import FilmeApi from "../../api/filmes.js";
 const filmeapi = new FilmeApi();
 export default {
   components: {
     CardFilmesSection3,
   },
+  
   data() {
     return {
       filmes: [],

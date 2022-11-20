@@ -6,6 +6,24 @@ export default class FilmeApi {
     );
     return response.data.results.slice(0, 4);
   }
+  async buscarTodosOsGeneros() {
+    const { data } = await axios.get(
+      "https://api.themoviedb.org/3/genre/movie/list?api_key=df0a1976ab5aa969146a8dbff08f0123&language=pt-BR"
+    );
+    return data.genres;
+  }
+
+
+
+  async buscarElenco(filme) {
+    const { data } = await axios.get(
+      `https://api.themoviedb.org/3/movie/${filme.id}/credits?api_key=df0a1976ab5aa969146a8dbff08f0123&language=pt-BR`,
+    );
+    return data.cast.id;
+  }
+
+
+
   async pesquisarFilmes() {
     const response = await axios.get(
       `https://api.themoviedb.org/3/search/movie?api_key=df0a1976ab5aa969146a8dbff08f0123&language=pt-BR&page=1&include_adult=false`,
@@ -29,6 +47,12 @@ export default class FilmeApi {
       `https://api.themoviedb.org/3/movie/${this.id}/credits?api_key=df0a1976ab5aa969146a8dbff08f0123&language=pt-BR`
     );
     return response.data.results.slice(0, 4);
+  }
+  async buscarFilmePorId() {
+    const response = await axios.get(
+      `https://api.themoviedb.org/3/movie/${this.id}?api_key=df0a1976ab5aa969146a8dbff08f0123&language=pt-BR`
+    );
+    return response.data.results;
   }
   async BuscarFilmesPorGenero(genero) {
     const response = await axios.get(

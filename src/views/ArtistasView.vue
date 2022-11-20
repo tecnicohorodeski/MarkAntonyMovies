@@ -1,7 +1,7 @@
 <script>
 import axios from "axios";
-import CardPessoaComp from "../components/CardPessoaComp.vue";
-import FiltroPessoaComp from "../components/filtroPeopleComp.vue";
+import CardPessoaComp from "../components/cards/CardPessoaComp.vue";
+import FiltroPessoaComp from "../components/filtros/filtroPeopleComp.vue";
 import ArtistasApi from "../api/artistas.js";
 const artistasapi = new ArtistasApi();
 export default {

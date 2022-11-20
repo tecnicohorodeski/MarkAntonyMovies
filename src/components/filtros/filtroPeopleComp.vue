@@ -17,10 +17,13 @@ function buscar() {
             for=""
             >Pesquise</label
           >
-          <input v-model="artista" type="text" />
-          <button type="submit" class="button-fil" @click="buscar">
-            Buscar
-          </button>
+          <div>
+            <input v-model="artista" class="input-" type="text" />
+            <button type="submit" class="button-fil" @click="buscar">
+                
+              Buscar
+            </button>
+          </div>
         </form>
       </div>
     </div>
