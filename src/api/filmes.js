@@ -15,11 +15,11 @@ export default class FilmeApi {
 
 
 
-  async buscarElenco(filme) {
+  async buscarElenco(id) {
     const { data } = await axios.get(
-      `https://api.themoviedb.org/3/movie/${filme.id}/credits?api_key=df0a1976ab5aa969146a8dbff08f0123&language=pt-BR`,
+      `https://api.themoviedb.org/3/movie/${id}/credits?api_key=df0a1976ab5aa969146a8dbff08f0123&language=pt-BR`,
     );
-    return data.cast.id;
+    return data.cast;
   }
 
 

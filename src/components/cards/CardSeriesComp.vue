@@ -3,13 +3,13 @@ export default {
   props: {
     poster: String,
     nome_fsa: String,
-    link_filme: {
+    link_serie: {
       type: Object,
     },
   },
   methods: {
     UrlDoFilme(id) {
-      return `/filmaco/${id}`;
+      return `/seriado/${id}`;
     },
   },
 };
@@ -20,11 +20,9 @@ export default {
     <div class="overlay">
       <div class="text">
         <h4 class="nome_filme">{{ nome_fsa }}</h4>
-        <!--
-          <router-link :to="UrlDoFilme(link_filme.id)">
-            <button class="verMais">VER MAIS</button>
-          </router-link>
-        -->
+        <router-link :to="UrlDoFilme(link_serie.id)">
+          <button class="verMais">VER MAIS</button>
+        </router-link>
       </div>
     </div>
   </div>

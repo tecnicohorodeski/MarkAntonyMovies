@@ -30,8 +30,7 @@ export default {
     async buscar(params) {
       if (params.genero !== "") {
         this.filmes = await filmeapi.BuscarFilmesPorGenero(params.genero);
-      }
-      else if (params.filme === "") {
+      } else if (params.filme === "") {
         this.filmes = await filmeapi.BuscarTodosOsFilmes();
       } else {
         const url = `https://api.themoviedb.org/3/search/movie?api_key=df0a1976ab5aa969146a8dbff08f0123&language=pt-BR&query=${params.filme}&page=1&include_adult=false`;

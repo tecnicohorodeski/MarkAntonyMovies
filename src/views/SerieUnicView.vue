@@ -1,15 +1,15 @@
 <script>
 import axios from "axios";
-import FilmeUnicComp from "../components/filmes/FilmeUnicComp.vue";
-import FilmeApi from "../api/filmes.js";
+import SerieUnicComp from "../components/series/SerieUnicComp.vue";
+import SeriesApi from "../api/series.js";
 import FiltrosApi from "../api/filtros.js";
 const filtrosapi = new FiltrosApi();
-const filmeapi = new FilmeApi();
+const seriesapi = new SeriesApi();
 export default {
   props: ["id"],
   data() {
     return {
-      filme: {},
+      serie: {},
       cast: [],
       artista: {},
       genre: {},
@@ -17,15 +17,15 @@ export default {
     };
   },
   components: {
-    FilmeUnicComp,
+    SerieUnicComp,
   },
   async created() {
-    this.filmes = await filmeapi.BuscarTodosOsFilmes();
-    this.genres = await filtrosapi.buscarTodosOsGeneros();
+    this.series = await seriesapi.BuscarTodasAsSeries();
+    this.genres = await filtrosapi.BuscarTodosOsGeneros();
     const url = `https://api.themoviedb.org/3/movie/${this.id}?api_key=df0a1976ab5aa969146a8dbff08f0123&language=pt-BR`;
     const { data } = await axios.get(url);
-    this.filme = data;
-    this.cast = await filmeapi.buscarElenco(this.id)
+    this.serie = data;
+    this.cast = await seriesapi.buscarElenco(this.id);
   },
   methods: {
     getPosterUrl(poster_path) {
@@ -36,17 +36,17 @@ export default {
 </script>
 <template>
   <main class="TudoDaPaginaUnica">
-    <img class="poster" :src="getPosterUrl(filme.poster_path)" alt="" />
+    <img class="poster" :src="getPosterUrl(serie.poster_path)" alt="" />
     <div class="BelissimaClasseOndeVaiConterTodaEssaEnormePagina">
-      <FilmeUnicComp
-        v-model="filme"
-        :nome_filme="filme.title"
-        :data_lancamento="filme.release_date"
-        :duracao="filme.runtime"
-        :sinopse_filme="filme.overview"
-        :generos="filme.genres"
-        :key="filme.id"
-        :poster="getPosterUrl(filme.poster_path)"
+      <SerieUnicComp
+        v-model="serie"
+        :nome_serie="serie.title"
+        :data_lancamento="serie.release_date"
+        :duracao="serie.runtime"
+        :sinopse_serie="serie.overview"
+        :generos="serie.genres"
+        :key="serie.id"
+        :poster="getPosterUrl(serie.poster_path)"
       />
       <div class="elenco">
         <h2 class="elenco-h2">Elenco</h2>
