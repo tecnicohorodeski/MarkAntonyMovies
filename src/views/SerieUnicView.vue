@@ -21,8 +21,8 @@ export default {
   },
   async created() {
     this.series = await seriesapi.BuscarTodasAsSeries();
-    this.genres = await filtrosapi.BuscarTodosOsGeneros();
-    const url = `https://api.themoviedb.org/3/movie/${this.id}?api_key=df0a1976ab5aa969146a8dbff08f0123&language=pt-BR`;
+    this.genres = await filtrosapi.buscarTodosOsGenerosSerie();
+    const url = `https://api.themoviedb.org/3/tv/${this.id}?api_key=df0a1976ab5aa969146a8dbff08f0123&language=pt-BR`;
     const { data } = await axios.get(url);
     this.serie = data;
     this.cast = await seriesapi.buscarElenco(this.id);
@@ -40,9 +40,9 @@ export default {
     <div class="BelissimaClasseOndeVaiConterTodaEssaEnormePagina">
       <SerieUnicComp
         v-model="serie"
-        :nome_serie="serie.title"
-        :data_lancamento="serie.release_date"
-        :duracao="serie.runtime"
+        :nome_serie="serie.name"
+        :data_lancamento="serie.last_air_date"
+        :duracao="serie.number_of_seasons"
         :sinopse_serie="serie.overview"
         :generos="serie.genres"
         :key="serie.id"

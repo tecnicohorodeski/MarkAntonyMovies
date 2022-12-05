@@ -2,13 +2,13 @@
 /*testando*/
 import axios from "axios";
 import CardFilmesComp from "../components/cards/CardFilmesComp.vue";
-import FiltroComp from "../components/filtros/filtroComp.vue";
+import FiltroCompFilme from "../components/filtros/filtroCompFilme.vue";
 import FilmeApi from "../api/filmes.js";
 import FiltrosApi from "../api/filtros.js";
 const filtrosapi = new FiltrosApi();
 const filmeapi = new FilmeApi();
 export default {
-  components: { CardFilmesComp, FiltroComp },
+  components: { CardFilmesComp, FiltroCompFilme },
   data() {
     return {
       filmes: [],
@@ -19,7 +19,7 @@ export default {
     };
   },
   async created() {
-    this.generos = await filtrosapi.buscarTodosOsGeneros();
+    this.generos = await filtrosapi.buscarTodosOsGenerosFilme();
     this.classificacoes = await filtrosapi.buscarTodasAsClassificacoes();
     this.filmes = await filmeapi.BuscarTodosOsFilmes();
   },
@@ -43,7 +43,7 @@ export default {
 </script>
 <template>
   <div class="filmes">
-    <FiltroComp @buscar="buscar" />
+    <FiltroCompFilme @buscar="buscar" />
     <div class="todos-filmes">
       <CardFilmesComp
         v-for="filme of filmes"

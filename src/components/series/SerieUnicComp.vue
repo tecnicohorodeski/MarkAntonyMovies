@@ -52,7 +52,7 @@ export default {
           <h2 class="nomefilme">{{ nome_serie }}</h2>
           <div class="dcd">
             <h3>{{ data_lancamento }}</h3>
-            <h3>{{ duracao }} minutos</h3>
+            <h3>{{ duracao }} temporada(s)</h3>
             <div class="generos-div">
               <h3 class="genero-h3" v-for="genero of generos" :key="genero.id">
                 {{ genero.name }}

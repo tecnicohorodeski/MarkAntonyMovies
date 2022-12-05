@@ -1,11 +1,13 @@
 <script>
 import axios from "axios";
 import CardSeriesComp from "../components/cards/CardSeriesComp.vue";
-import FiltroComp from "../components/filtros/filtroComp.vue";
+import FiltroCompSerie from "../components/filtros/filtroCompSerie.vue";
+import FiltrosApi from "../api/filtros.js";
 import SeriesApi from "../api/series.js";
+const filtrosapi = new FiltrosApi();
 const seriesapi = new SeriesApi();
 export default {
-  components: { CardSeriesComp, FiltroComp },
+  components: { CardSeriesComp, FiltroCompSerie },
   data() {
     return {
       series: [],
@@ -13,7 +15,7 @@ export default {
     };
   },
   async created() {
-    this.generos = await seriesapi.buscarTodosOsGenerosSerie();
+    this.generos = await filtrosapi.buscarTodosOsGenerosSerie();
     this.series = await seriesapi.BuscarTodasAsSeries();
   },
   methods: {
@@ -22,7 +24,7 @@ export default {
     },
     async buscar(params) {
       if (params.genero !== "") {
-        this.series = await seriesapi.BuscarSeriesPorGenero(params.genero);
+        this.series = await filtrosapi.BuscarSeriesPorGenero(params.genero);
       } else if (params.serie === "") {
         this.series = await seriesapi.BuscarTodasAsSeries();
       } else {
@@ -36,7 +38,7 @@ export default {
 </script>
 <template>
   <div class="filmes">
-    <FiltroComp />
+    <FiltroCompSerie @buscar="buscar"/>
     <div class="todos-filmes">
       <CardSeriesComp
         v-for="serie of series"
