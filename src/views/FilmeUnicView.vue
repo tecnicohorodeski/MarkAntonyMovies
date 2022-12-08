@@ -21,7 +21,7 @@ export default {
   },
   async created() {
     this.filmes = await filmeapi.BuscarTodosOsFilmes();
-    this.genres = await filtrosapi.buscarTodosOsGeneros();
+    this.genres = await filtrosapi.buscarTodosOsGenerosFilme();
     const url = `https://api.themoviedb.org/3/movie/${this.id}?api_key=df0a1976ab5aa969146a8dbff08f0123&language=pt-BR`;
     const { data } = await axios.get(url);
     this.filme = data;
@@ -48,15 +48,6 @@ export default {
         :key="filme.id"
         :poster="getPosterUrl(filme.poster_path)"
       />
-      <div class="elenco">
-        <h2 class="elenco-h2">Elenco</h2>
-        <CardPessoaComp
-          v-for="cast of filme"
-          :nome_fsa="artista.name"
-          :key="artista.id"
-          :poster="getPosterUrl(artista.poster_path)"
-        />
-      </div>
     </div>
   </main>
 </template>

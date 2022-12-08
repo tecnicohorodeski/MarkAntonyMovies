@@ -3,7 +3,6 @@ import HomeView from "@/views/HomeView.vue";
 import FilmesView from "@/views/FilmesView.vue";
 import FilmeUnicView from "@/views/FilmeUnicView.vue";
 import SerieUnicView from "@/views/SerieUnicView.vue";
-import ArtistasView from "@/views/ArtistasView.vue";
 import SeriesView from "@/views/SeriesView.vue";
 
 const router = createRouter({
@@ -36,11 +35,6 @@ const router = createRouter({
       name: "series",
       component: SeriesView,
     },
-    {
-      path: "/artistas",
-      name: "artistas",
-      component: ArtistasView,
-    }
   ],
 });
 

@@ -6,7 +6,7 @@
 }
 main{
     display: flex;
-    justify-content: center;
+    margin-left: 15px;
 }
 body {
   height: 100vh;
@@ -276,7 +276,7 @@ i{
 .poster {
   height: 84vh;
   width: 32%;
-  margin: 0 48px;
+  margin: 48px 0px 48px 48px;
 }
 .TudoDaPaginaUnica{
   display: flex;
@@ -364,20 +364,4 @@ label{
   border-left: 15px solid #2f00ff;
   background-color: black;
   flex-direction: column;
-}
-
-
-/*filtro dos artistas */
-#filtro-pessoa{
-  width: 50%;
-}
-#tfp{
-  display: flex;
-  justify-content: center;
-}
-#slp {
-  align-items: stretch;
-}
-.people-label{
-  width: 500px;
 }

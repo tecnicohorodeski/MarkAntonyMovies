@@ -48,15 +48,6 @@ export default {
         :key="serie.id"
         :poster="getPosterUrl(serie.poster_path)"
       />
-      <div class="elenco">
-        <h2 class="elenco-h2">Elenco</h2>
-        <CardPessoaComp
-          v-for="artista of cast"
-          :nome_fsa="artista.name"
-          :key="artista.id"
-          :poster="getPosterUrl(artista.poster_path)"
-        />
-      </div>
     </div>
   </main>
 </template>
