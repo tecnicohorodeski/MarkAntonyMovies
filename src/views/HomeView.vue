@@ -40,15 +40,15 @@ export default {
       <div class="div-cards">
         <CardComp
           dicas="Acompanhe canais de críticos de cinema e produções de TV"
-          picture_src="src/assets/img/undraw_home_cinema_l7yl.png"
+          picture_src="./undraw_home_cinema_l7yl.png"
         />
         <CardComp
           dicas="Acesse sites e apps que indicam filmes e séries fora do óbvio"
-          picture_src="src/assets/img/undraw_horror_movie_3988.png"
+          picture_src="./undraw_horror_movie_3988.png"
         />
         <CardComp
           dicas="Acompanhe perfis do Instagram com frases de filmes e séries"
-          picture_src="src/assets/img/undraw_netflix_q00o.png"
+          picture_src="./undraw_netflix_q00o.png"
         />
       </div>
     </div>

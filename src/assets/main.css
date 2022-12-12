@@ -1,16 +1,16 @@
 /*basico*/
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Noto+Sans+Buhid&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&family=Noto+Sans+Buhid&display=swap");
 * {
   margin: 0;
   padding: 0;
 }
-main{
-    display: flex;
-    margin-left: 15px;
+main {
+  display: flex;
+  margin-left: 15px;
 }
 body {
   height: 100vh;
-  font-family: 'Noto Sans Buhid', sans-serif;
+  font-family: "Noto Sans Buhid", sans-serif;
   background-color: rgba(7, 6, 14, 0.938);
 }
 header {
@@ -26,7 +26,7 @@ p {
   font-size: 1.3em;
 }
 h1 {
-  font-family: 'Fira Sans', sans-serif;
+  font-family: "Fira Sans", sans-serif;
   color: rgb(255, 255, 255);
   font-size: 3em;
 }
@@ -39,7 +39,7 @@ header nav {
   width: 90%;
   justify-content: space-between;
 }
-.links-router{
+.links-router {
   font-size: 21px;
   margin: 0 25px;
   color: rgb(255, 255, 255);
@@ -50,23 +50,23 @@ header nav {
 h1 {
   text-decoration: underline;
 }
-h2{
+h2 {
   font-size: 3em;
 }
-.links a:hover{
+.links a:hover {
   background-color: rgba(0, 0, 0, 0.034);
   border-bottom: 3px solid #2f00ff;
 }
 button {
   margin-top: 25px;
   padding: 2% 6%;
-  background-color:  #2f00ff;
+  background-color: #2f00ff;
   border: none;
   color: white;
   font-weight: bold;
   border-radius: 15px;
 }
-button:hover{
+button:hover {
   cursor: pointer;
 }
 .footer {
@@ -78,22 +78,21 @@ button:hover{
   justify-content: space-evenly;
   align-items: center;
 }
-.github, .mam{
+.github,
+.mam {
   display: flex;
   flex-direction: column;
   color: white;
   align-items: center;
 }
-i{
+i {
   color: white;
   margin-top: 10px;
   font-size: 2.5em;
 }
 
-
-
 /*section 1 */
-.sublinhader{
+.sublinhader {
   text-decoration: underline;
   color: white;
 }
@@ -110,12 +109,11 @@ i{
   align-items: center;
 }
 .fundo {
-  background: url(src/assets/img/twbb.jpg) no-repeat;
+  background: url(https://markantonymovies.surge.sh/img/twbb.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   height: 80vh;
 }
-
 
 /*section 2*/
 .imagem-h2 {
@@ -141,7 +139,7 @@ i{
   display: flex;
   flex-direction: column;
 }
-.icones{
+.icones {
   height: 60px;
   width: 70px;
 }
@@ -175,7 +173,6 @@ i{
   background-repeat: no-repeat;
 }
 
-
 /*section 3*/
 .section3 {
   background-color: black;
@@ -187,10 +184,10 @@ i{
   border-radius: 25px 25px 0px 0px;
   justify-content: space-around;
 }
-.PoEmh3{
+.PoEmh3 {
   font-size: 2.5em;
 }
-#section3-container{
+#section3-container {
   width: 21%;
 }
 .filmes-linhas {
@@ -209,7 +206,7 @@ i{
 }
 
 /*filmes pgn*/
-.filmes{
+.filmes {
   display: flex;
   flex-direction: column;
 }
@@ -247,10 +244,10 @@ i{
   border-radius: 6px;
   width: 100%;
   opacity: 0;
-  transition: .5s ease;
+  transition: 0.5s ease;
   background-color: #2f00ff;
 }
-.verMais{
+.verMais {
   padding: 8% 8%;
   background-color: rgb(255 255 255);
   color: #2f00ff;
@@ -278,14 +275,14 @@ i{
   width: 32%;
   margin: 48px 0px 48px 48px;
 }
-.TudoDaPaginaUnica{
+.TudoDaPaginaUnica {
   display: flex;
 }
-.BelissimaClasseOndeVaiConterTodaEssaEnormePagina{
+.BelissimaClasseOndeVaiConterTodaEssaEnormePagina {
   display: flex;
   flex-direction: column;
 }
-.dcd{
+.dcd {
   display: flex;
   justify-content: space-evenly;
 }
@@ -315,22 +312,23 @@ i{
 }
 
 /*filtro*/
-form{
+form {
   display: flex;
 }
-h3{
+h3 {
   font-size: 1.5em;
 }
-.button-fil{
+.button-fil {
   margin-top: 0;
 }
-input, select {
+input,
+select {
   height: 25px;
   border: none;
   width: 100%;
   border-radius: 10px;
 }
-.filmes-filtros{
+.filmes-filtros {
   display: flex;
   border-radius: 15px;
   border: 2px solid #2f00ff;
@@ -342,7 +340,7 @@ input, select {
   display: flex;
   align-items: center;
 }
-label{
+label {
   font-size: 1.1em;
   font-weight: bold;
   margin-bottom: 5px;
@@ -353,10 +351,10 @@ label{
   margin: 5px;
   flex-direction: column;
 }
-.todofiltro{
+.todofiltro {
   margin: 25px 25px 10px 25px;
 }
-.filtro{
+.filtro {
   color: white;
   padding: 25px;
   border-radius: 15px;
