@@ -167,7 +167,7 @@ i {
   height: 400px;
   border-radius: 15px;
   display: flex;
-  background: url("src/assets/img/djun.jpg");
+  background: url("https://markantonymovies.surge.sh/img/djun.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -199,7 +199,7 @@ i {
   height: 670px;
   border-radius: 15px;
   display: flex;
-  background: url("src/assets/img/chaplin.jpg");
+  background: url("https://markantonymovies.surge.sh/img/chaplin.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
